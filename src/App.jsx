@@ -5,6 +5,8 @@ import Notice from './pages/notice';
 import Tender from './pages/tender';
 import Publication from './pages/publication';
 import Faculty from './pages/faculty';
+import ResearchProject from './pages/research-project';
+import ILMS from './pages/ilms';
 import './index.css'
 
 function App() {
@@ -22,6 +24,10 @@ function App() {
         return <Publication />;
       case 'faculty':
         return <Faculty />;
+      case 'research project':
+        return <ResearchProject />;
+      case 'ilms':
+        return <ILMS />;
       default:
         return <Dashboard />;
     }
