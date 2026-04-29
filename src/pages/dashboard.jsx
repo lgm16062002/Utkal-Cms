@@ -49,6 +49,8 @@ const upcomingEvents = [
     dateStr: 'May 24, 2025 • 10:00 AM',
     location: 'Seminar Hall, CS Dept.',
   },
+
+  // hiii i am amanas ranjan sahoo
   {
     month: 'MAY', day: '28', variant: 'may',
     title: 'Workshop on Data Science',
