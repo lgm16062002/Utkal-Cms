@@ -6,27 +6,26 @@ body {
     background-color: #f8fafc;
 }
 
-.tender-page {
+.pub-page {
     font-family: 'Inter', sans-serif;
-    /* padding: 24px 32px; */
     background: #f8fafc;
     min-height: 100vh;
     color: #334155;
     box-sizing: border-box;
 }
 
-.tender-page * {
+.pub-page * {
     box-sizing: border-box;
 }
 
-.tender-header {
+.pub-header {
     margin-bottom: 24px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.tender-header-left {
+.pub-header-left {
     display: flex;
     flex-direction: column;
 }
@@ -57,20 +56,20 @@ body {
     color: #1e293b;
 }
 
-.tender-header h1 {
+.pub-header h1 {
     font-size: 24px;
     font-weight: 700;
     color: #1e1b4b;
     margin: 0 0 6px 0;
 }
 
-.tender-subtitle {
+.pub-subtitle {
     font-size: 14px;
     color: #64748b;
     margin: 0;
 }
 
-.btn-add-tender {
+.btn-add-pub {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -78,7 +77,7 @@ body {
     background: #4f46e5;
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -87,17 +86,17 @@ body {
     margin-top: 24px;
 }
 
-.btn-add-tender:hover {
+.btn-add-pub:hover {
     background: #4338ca;
 }
 
-.tender-content {
+.pub-content {
     display: flex;
     gap: 24px;
     align-items: flex-start;
 }
 
-.tender-list-section {
+.pub-list-section {
     flex: 1;
     background: #ffffff;
     border-radius: 5px;
@@ -106,7 +105,7 @@ body {
     border: 1px solid #f1f5f9;
 }
 
-.tender-list-header {
+.pub-list-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
@@ -132,7 +131,7 @@ body {
     width: 100%;
     padding: 10px 14px 10px 38px;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 13px;
     color: #334155;
     outline: none;
@@ -153,7 +152,7 @@ body {
 .filter-box select {
     padding: 10px 36px 10px 16px;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 13px;
     font-weight: 600;
     color: #334155;
@@ -162,7 +161,7 @@ body {
     appearance: none;
     background: #ffffff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E") no-repeat right 12px center;
     background-size: 16px;
-    min-width: 130px;
+    min-width: 110px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -174,7 +173,7 @@ body {
     height: 40px;
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #64748b;
     cursor: pointer;
     transition: all 0.2s;
@@ -186,128 +185,119 @@ body {
     border-color: #cbd5e1;
 }
 
-.tender-table {
+/* Pub Table */
+.pub-table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.tender-table th {
-    text-align: left;
-    font-size: 13px;
-    font-weight: 600;
-    color: #64748b;
-    padding: 14px 12px;
+.pub-table > tbody > tr {
     border-bottom: 1px solid #f1f5f9;
 }
 
-.tender-table td {
-    padding: 16px 12px;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 13px;
-    color: #334155;
+.pub-table > tbody > tr:last-child {
+    border-bottom: none;
+}
+
+.pub-table > tbody > tr > td {
+    padding: 24px 16px;
     vertical-align: middle;
 }
 
-.tender-table tr:hover td {
-    background-color: #f8fafc;
-}
-
 .col-id {
-    font-weight: 600;
+    font-weight: 700;
     color: #0f172a;
+    font-size: 14px;
     width: 40px;
+    vertical-align: top !important;
 }
 
-.tender-title-cell {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.tender-title-text {
-    font-weight: 600;
-    color: #1e293b;
-    font-size: 13px;
-}
-
-.tender-attachment {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-}
-
-.tender-attachment.pdf {
-    color: #dc2626;
-}
-
-.tender-attachment.link {
-    color: #3b82f6;
-}
-
-.attachment-name {
-    color: #64748b;
-    text-decoration: none;
-}
-
-.tender-attachment.link .attachment-name {
-    color: #3b82f6;
+.col-content-data {
+    color: #334155;
 }
 
 .col-date {
     color: #64748b;
     font-weight: 500;
+    font-size: 13px;
+    width: 120px;
+    text-align: right;
 }
 
-.status-indicator {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 600;
+.col-actions {
+    width: 120px;
+}
+
+/* Inner elements for content */
+.pub-inner-table-wrapper {
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pub-inner-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 12px;
 }
 
-.status-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
+.pub-inner-table th {
+    background: #f8fafc;
+    color: #1e293b;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.status-active {
-    color: #059669;
+.pub-inner-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
 }
 
-.status-active .status-dot {
-    background-color: #10b981;
+.pub-inner-table tr:last-child td {
+    border-bottom: none;
 }
 
-.status-upcoming {
-    color: #ea580c;
+.pub-content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 4px 8px;
 }
 
-.status-upcoming .status-dot {
-    background-color: #f97316;
+.pub-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
 }
 
-.status-closed {
-    color: #dc2626;
+.pub-ul, .pub-ol {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.6;
 }
 
-.status-closed .status-dot {
-    background-color: #ef4444;
+.pub-text-lines p {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+    color: #475569;
 }
 
-.status-expired {
-    color: #64748b;
+.pub-text-lines strong {
+    color: #1e293b;
+    font-weight: 600;
 }
 
-.status-expired .status-dot {
-    background-color: #94a3b8;
-}
 
 .action-buttons {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 12px;
 }
 
@@ -334,7 +324,8 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
-    padding-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
 }
 
 .pagination-text {
@@ -373,8 +364,8 @@ body {
 }
 
 /* Form Section */
-.add-tender-section {
-    width: 360px;
+.add-pub-section {
+    width: 420px;
     background: #ffffff;
     border-radius: 5px;
     padding: 24px;
@@ -409,105 +400,101 @@ body {
     color: #dc2626;
 }
 
-.form-control {
-    width: 100%;
-    padding: 10px 12px;
+/* Mock Editor */
+.mock-editor {
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.mock-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px;
+    background: #fafafa;
+    border-bottom: 1px solid #e2e8f0;
+    gap: 6px;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 20px;
+    background: #e2e8f0;
+    margin: 0 4px;
+}
+
+.toolbar-btn {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #475569;
     font-size: 13px;
-    color: #334155;
-    outline: none;
-    font-family: 'Inter', sans-serif;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-btn:hover {
+    background: #e2e8f0;
+}
+
+.toolbar-btn.text-btn {
+    font-size: 12px;
     font-weight: 500;
 }
 
-.form-control::placeholder {
+.ml-1 {
+    margin-left: 4px;
+}
+
+.mock-editor-content {
+    min-height: 380px;
+    padding: 16px;
+    font-size: 14px;
+    color: #334155;
+    outline: none;
+    line-height: 1.6;
+}
+
+.mock-editor-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    font-size: 11px;
     color: #94a3b8;
-    font-weight: 400;
 }
 
-.form-control:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-}
-
-.upload-zone {
-    border: 1px dashed #cbd5e1;
-    background-color: #f8fafc;
-    border-radius: 8px;
-    padding: 24px;
-    text-align: center;
-    cursor: pointer;
-    transition: border-color 0.2s;
-    margin-top: 8px;
-}
-
-.upload-zone:hover {
-    border-color: #4f46e5;
-}
-
-.upload-icon {
-    color: #4f46e5;
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-.upload-text {
-    font-size: 13px;
-    color: #4f46e5;
+.powered-by {
     font-weight: 600;
-    margin: 0 0 4px 0;
+    letter-spacing: 0.5px;
 }
 
-.upload-text span {
-    color: #64748b;
-    font-weight: 400;
-}
-
-.upload-hint {
+.editor-hint {
     font-size: 12px;
-    color: #94a3b8;
-    margin: 0;
-}
-
-.date-input-wrapper {
-    position: relative;
-}
-
-.date-input-wrapper input {
-    padding-right: 36px;
-    font-family: 'Inter', sans-serif;
-}
-
-.date-input-wrapper input[type="date"] {
-    position: relative;
-}
-
-.date-input-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: transparent;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.calendar-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #94a3b8;
-    pointer-events: none;
+    color: #64748b;
+    margin: 10px 0 0;
+    line-height: 1.5;
 }
 
 .form-actions {
     display: flex;
     gap: 12px;
-    margin-top: 28px;
 }
 
 .btn-cancel {
@@ -515,7 +502,7 @@ body {
     padding: 12px;
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #334155;
     font-size: 14px;
     font-weight: 600;
@@ -532,7 +519,7 @@ body {
     padding: 12px;
     background: #4f46e5;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;
@@ -545,35 +532,26 @@ body {
 }
 
 @media (max-width: 1100px) {
-    .tender-content {
+    .pub-content {
         flex-direction: column;
     }
-
-    .add-tender-section {
+    .add-pub-section {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .tender-list-header {
+    .pub-list-header {
         flex-direction: column;
     }
-
     .search-box {
         max-width: 100%;
     }
-
     .filter-group {
         width: 100%;
     }
-
     .filter-box,
     .filter-box select {
         flex: 1;
-    }
-
-    .tender-table {
-        display: block;
-        overflow-x: auto;
     }
 }
