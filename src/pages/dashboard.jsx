@@ -132,7 +132,7 @@ const Dashboard = () => {
       {/* ── Header ──────────────────────────────────── */}
       <div className="dash-header">
         <div className="dash-header-left">
-          <h1>Welcome back, Admin! 👋</h1>
+          <h1>Welcome To HOD Dashboard 👋</h1>
           <p>Here&apos;s what&apos;s happening in your department today.</p>
         </div>
         <button className="dash-date-picker">

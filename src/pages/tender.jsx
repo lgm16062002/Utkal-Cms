@@ -20,7 +20,7 @@ const Tender = () => {
   const [editingTender, setEditingTender] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
-  
+
   const [formData, setFormData] = useState({
     title: '',
     link: '',
@@ -160,9 +160,9 @@ const Tender = () => {
           <div className="breadcrumb">
             <span className="breadcrumb-link">Dashboard</span>
             <span className="breadcrumb-separator">&gt;</span>
-            <span className="breadcrumb-current">Department Tender</span>
+            <span className="breadcrumb-current">Tender</span>
           </div>
-          <h1>Department Tenders</h1>
+          <h1>Tenders</h1>
           <p className="tender-subtitle">Manage all tenders uploaded by your department.</p>
         </div>
         <button className="btn-add-tender" onClick={handleAddNewClick}>
@@ -284,10 +284,10 @@ const Tender = () => {
             <div className="form-group">
               <label>File Attachment <span style={{ color: '#64748b', fontWeight: '400' }}>(PDF, DOC, DOCX)</span></label>
               <div className="upload-zone" onClick={() => fileInputRef.current.click()}>
-                <input 
-                  type="file" 
-                  ref={fileInputRef} 
-                  style={{ display: 'none' }} 
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  style={{ display: 'none' }}
                   accept=".pdf,.doc,.docx"
                   onChange={(e) => {
                     if (e.target.files && e.target.files[0]) {
@@ -304,10 +304,10 @@ const Tender = () => {
                   <>
                     <div className="upload-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M12 12V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M9 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M12 12V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M9 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                     <p className="upload-text">Click to upload <span>or drag and drop</span></p>

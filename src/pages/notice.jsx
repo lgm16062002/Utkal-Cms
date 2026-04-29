@@ -49,7 +49,7 @@ const Notice = () => {
       category: 'Academic',
       publishedDate: 'May 18, 2025',
       lastDate: 'May 30, 2025',
-      status: 'Published'
+      status: 'Appr. Pending'
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ const Notice = () => {
       category: 'General',
       publishedDate: 'May 16, 2025',
       lastDate: 'May 20, 2025',
-      status: 'Published'
+      status: 'Appr. Pending'
     },
     {
       id: 3,
@@ -89,7 +89,7 @@ const Notice = () => {
       category: 'General',
       publishedDate: 'May 10, 2025',
       lastDate: 'May 31, 2025',
-      status: 'Published'
+      status: 'Appr. Pending'
     },
     {
       id: 6,
@@ -184,9 +184,9 @@ const Notice = () => {
           <div className="breadcrumb">
             <span className="breadcrumb-link">Dashboard</span>
             <span className="breadcrumb-separator">&gt;</span>
-            <span className="breadcrumb-current">Department Notice</span>
+            <span className="breadcrumb-current">Notice</span>
           </div>
-          <h1>Department Notices</h1>
+          <h1>Notices</h1>
           <p className="notice-subtitle">Manage all notices published by your department.</p>
         </div>
         <button className="btn-add-notice" onClick={handleAddNewClick}>
@@ -331,10 +331,10 @@ const Notice = () => {
             <div className="form-group">
               <label>File Attachment <span style={{ color: '#64748b', fontWeight: '400' }}>(PDF, DOC, DOCX)</span></label>
               <div className="upload-zone" onClick={() => fileInputRef.current.click()}>
-                <input 
-                  type="file" 
-                  ref={fileInputRef} 
-                  style={{ display: 'none' }} 
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  style={{ display: 'none' }}
                   accept=".pdf,.doc,.docx"
                   onChange={(e) => {
                     if (e.target.files && e.target.files[0]) {
@@ -351,10 +351,10 @@ const Notice = () => {
                   <>
                     <div className="upload-icon">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M12 12V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M9 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M14 2V8H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M12 12V18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M9 15H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                     <p className="upload-text">Click to upload <span>or drag and drop</span></p>

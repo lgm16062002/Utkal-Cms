@@ -7,12 +7,16 @@ import {
   faUser, 
   faChevronDown,
   faUserGear,
-  faRightFromBracket 
+  faRightFromBracket,
+  faBullhorn,
+  faBriefcase,
+  faCalendarDays
 } from '@fortawesome/free-solid-svg-icons';
 import './header.css';
 
 const Header = ({ onMenuClick }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isNotifOpen, setIsNotifOpen] = useState(false);
 
   return (
     <header className="header">
@@ -28,9 +32,55 @@ const Header = ({ onMenuClick }) => {
       </div>
 
       <div className="header-right">
-        <div className="notification-container">
-          <FontAwesomeIcon icon={faBell} className="bell-icon" style={{ fontSize: '20px' }} />
-          <span className="notification-badge">12</span>
+        <div className="notification-wrapper">
+          <div className="notification-container" onClick={() => setIsNotifOpen(!isNotifOpen)}>
+            <FontAwesomeIcon icon={faBell} className="bell-icon" style={{ fontSize: '20px' }} />
+            <span className="notification-badge">12</span>
+          </div>
+
+          {isNotifOpen && (
+            <div className="notification-dropdown">
+              <div className="notification-header">
+                <h3>Notifications</h3>
+                <span className="mark-read">Mark all as read</span>
+              </div>
+              <div className="notification-list">
+                <div className="notification-item unread">
+                  <div className="notif-icon-wrapper text-blue">
+                    <FontAwesomeIcon icon={faBullhorn} />
+                  </div>
+                  <div className="notif-content">
+                    <p className="notif-title">New Notice Published</p>
+                    <p className="notif-desc">Semester schedule has been updated</p>
+                    <span className="notif-time">2 mins ago</span>
+                  </div>
+                </div>
+                <div className="notification-item">
+                  <div className="notif-icon-wrapper text-green">
+                    <FontAwesomeIcon icon={faBriefcase} />
+                  </div>
+                  <div className="notif-content">
+                    <p className="notif-title">Tender Approved</p>
+                    <p className="notif-desc">Equipment procurement tender was approved</p>
+                    <span className="notif-time">1 hour ago</span>
+                  </div>
+                </div>
+                <div className="notification-item">
+                  <div className="notif-icon-wrapper text-purple">
+                    <FontAwesomeIcon icon={faCalendarDays} />
+                  </div>
+                  <div className="notif-content">
+                    <p className="notif-title">Upcoming Event</p>
+                    <p className="notif-desc">AI Seminar starts tomorrow at 10 AM</p>
+                    <span className="notif-time">5 hours ago</span>
+                  </div>
+                </div>
+              </div>
+              <div className="notification-footer">
+                <button className="view-all-btn">View All Notifications</button>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="profile-wrapper">

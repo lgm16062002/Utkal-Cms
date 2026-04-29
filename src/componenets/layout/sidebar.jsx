@@ -107,7 +107,7 @@ const Sidebar = ({ isCollapsed, isMobileOpen, isMobile, activePage, setActivePag
             </nav>
 
             {/* Department Card */}
-            <div 
+            {/* <div 
                 className="sidebar-dept-card"
                 data-tooltip={isCollapsed ? "Department of Computer Science" : ""}
             >
@@ -130,7 +130,7 @@ const Sidebar = ({ isCollapsed, isMobileOpen, isMobile, activePage, setActivePag
                         <FontAwesomeIcon icon={faChevronDown} style={{ color: '#818cf8', fontSize: '14px' }} />
                     </div>
                 )}
-            </div>
+            </div> */}
         </aside>
     );
 };
