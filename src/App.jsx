@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from './componenets/layout/layout';
 import Dashboard from './pages/dashboard';
 import Notice from './pages/notice';
+import Tender from './pages/tender';
 import './index.css'
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
         return <Dashboard />;
       case 'notice':
         return <Notice />;
+      case 'tender':
+        return <Tender />;
       default:
         return <Dashboard />;
     }
