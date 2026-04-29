@@ -4,6 +4,7 @@ import Dashboard from './pages/dashboard';
 import Notice from './pages/notice';
 import Tender from './pages/tender';
 import Publication from './pages/publication';
+import Faculty from './pages/faculty';
 import './index.css'
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         return <Tender />;
       case 'publication':
         return <Publication />;
+      case 'faculty':
+        return <Faculty />;
       default:
         return <Dashboard />;
     }
